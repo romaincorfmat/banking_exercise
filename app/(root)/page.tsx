@@ -21,7 +21,7 @@ const Home = async () => {
 					<TotalBalanceBox
 						accounts={[]}
 						totalBanks={1}
-						totalCurrentBalance={1243794258.67}
+						totalCurrentBalance={49543.67}
 					/>
 				</header>
 				RECENT TRANSACTIONS
