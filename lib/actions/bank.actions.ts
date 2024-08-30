@@ -115,10 +115,10 @@ export const getAccount = async ({ appwriteItemId }: getAccountProps) => {
 		};
 
 		// sort transactions by date such that the most recent transaction is first
-		const allTransactions = [...transactions, { ...transferTransactions }].sort(
+		const allTransactions = [...transactions, ...transferTransactions].sort(
 			(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
 		);
-		console.log("All Transactions:", allTransactions);
+
 		return parseStringify({
 			data: account,
 			transactions: allTransactions,
@@ -161,7 +161,7 @@ export const getTransactions = async ({
 			});
 
 			const data = response.data;
-			console.log(data);
+
 			transactions = response.data.added.map((transaction) => ({
 				id: transaction.transaction_id,
 				name: transaction.name,
