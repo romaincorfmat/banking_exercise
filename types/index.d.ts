@@ -8,14 +8,14 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-	firstName?: string;
-	lastName?: string;
-	address1?: string;
-	city?: string;
-	state?: string;
-	postalCode?: string;
-	dateOfBirth?: string;
-	ssn?: string;
+	firstName: string;
+	lastName: string;
+	address1: string;
+	city: string;
+	state: string;
+	postalCode: string;
+	dateOfBirth: string;
+	ssn: string;
 	email: string;
 	password: string;
 };
@@ -75,7 +75,6 @@ declare type Transaction = {
 	category: string;
 	date: string;
 	image: string;
-	type: string;
 	$createdAt: string;
 	channel: string;
 	senderBankId: string;
